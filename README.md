@@ -11,3 +11,6 @@ Libraries Used:
 . os 
 . pathlib 
 
+To get it to work you have to:
+. Pip install Kivy
+. Pip install pytube3
