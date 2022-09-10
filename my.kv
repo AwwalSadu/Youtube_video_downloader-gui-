@@ -1,0 +1,42 @@
+<MainWindow>:
+
+    name: name 
+    message: message
+
+
+    FloatLayout:
+        cols: 1
+        pos: 100,100
+        size: root.width - 100, root.height - 100
+        down: down
+
+        Label:
+            text: "Youtube video Downloader"
+            pos_hint: {'x': 0.1,'top': 0.9}
+            size_hint: 0.8, 0.1
+            font_size: 30
+
+        TextInput:
+            id: name
+            #hint_text: 'Paste video URL'
+            pos_hint: {'x': 0.2,'top': 0.7}
+            size_hint: 0.6, 0.1
+
+        
+        Button:
+            id: down
+            text: "Download video"
+            background_color: 0,0,0.7,1
+            pos_hint: {'x': 0.4,'top': 0.5}
+            size_hint: 0.3, 0.2
+            on_press: root.btn()
+
+#=====================Download status identifier ================================================
+        Label:
+            id: message
+            width: self.texture_size[0]
+            size_hint: 0 , 0
+            #text_size: (None, None)
+            text: ' '
+            pos_hint: {'x': 0.4,'top': 0.2}
+
